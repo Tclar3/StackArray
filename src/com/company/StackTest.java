@@ -110,17 +110,21 @@ class StackTest {
         s.pop();
         assertTrue(s.isEmpty());
 
+        //checking if exception is thrown
         Stack empty = new Stack();
         assertThrows(Exception.class, () -> empty.peek(), "Exception on" + "pop: Stack empty");
     }
 
     @org.junit.jupiter.api.Test
     void peek() throws Exception {
+        //checking if item peeked is correct item
         Stack s = new Stack();
         s.push(1);
         s.push(2);
         assertEquals(2, s.peek());
 
+
+        //checking if exception is thrown
         Stack empty = new Stack();
         assertThrows(Exception.class, () -> empty.peek(), "Exception on" + "peek: Stack empty");
     }
